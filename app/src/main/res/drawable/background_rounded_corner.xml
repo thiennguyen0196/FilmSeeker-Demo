@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+  <gradient
+    android:angle="0"
+    android:endColor="@color/colorAccent"
+    android:startColor="@color/colorPrimary" />
+  <padding
+    android:bottom="@dimen/mdLayoutSpacing_xs"
+    android:left="@dimen/mdLayoutSpacing_xs"
+    android:right="@dimen/mdLayoutSpacing_xs"
+    android:top="@dimen/mdLayoutSpacing_xs" />
+  <corners android:radius="@dimen/mdLayoutSpacing_sm" />
+</shape>

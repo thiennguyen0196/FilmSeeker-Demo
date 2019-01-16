@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+
+android {
+  compileSdkVersion 27
+  defaultConfig {
+    minSdkVersion 15
+    targetSdkVersion 27
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+
+ext {
+  //App dependencies
+  junitVersion = '4.12'
+  mockitoVersion = '1.10.19'
+  rxjavaVersion = '2.2.5'
+  rxandroidVersion = '2.1.0'
+}
+
+
+dependencies {
+  implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+  testImplementation "junit:junit:${junitVersion}"
+  testImplementation "org.mockito:mockito-core:${mockitoVersion}"
+
+  implementation "io.reactivex.rxjava2:rxjava:${rxjavaVersion}"
+  implementation "io.reactivex.rxjava2:rxandroid:${rxandroidVersion}"
+}

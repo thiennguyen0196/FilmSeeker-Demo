@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+    android:id="@+id/action_trending_movies"
+    android:icon="@drawable/ic_trending"
+    android:title="@string/menu_trending" />
+  <item
+    android:id="@+id/action_top_rated"
+    android:icon="@drawable/ic_top_rated"
+    android:title="@string/menu_top_rated" />
+  <item
+    android:id="@+id/action_nearby_theaters"
+    android:icon="@drawable/ic_nearby_theater"
+    android:title="@string/menu_nearby_theaters" />
+</menu>

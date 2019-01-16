@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="width_photo_theater">160dp</dimen>
+  <dimen name="width_btn">140dp</dimen>
+
+  <item name="ratio_1_1" format="float" type="dimen">1.0</item>
+  <item name="ratio_16_9" format="float" type="dimen">1.78</item>
+  <item name="ratio_2_3" format="float" type="dimen">0.67</item>
+  <item name="ratio_4_3" format="float" type="dimen">1.33</item>
+  <item name="ratio_7_8" format="float" type="dimen">0.875</item>
+</resources>
