@@ -32,22 +32,22 @@ public class DatabaseServiceImpl implements DatabaseService {
   }
 
   @Override
-  public Observable<Void> deleteMoviesTrending() {
+  public Observable<Boolean> deleteMoviesTrending() {
     return Observable.defer(() -> {
       SQLite.delete(DatabaseMovieModel.class)
           .where(DatabaseMovieModel_Table.type.is(MovieType.TRENDING.getValue()))
           .execute();
-      return Observable.just(null);
+      return Observable.just(Boolean.TRUE);
     });
   }
 
   @Override
-  public Observable<Void> deleteMoviesTopRated() {
+  public Observable<Boolean> deleteMoviesTopRated() {
     return Observable.defer(() -> {
       SQLite.delete(DatabaseMovieModel.class)
           .where(DatabaseMovieModel_Table.type.is(MovieType.TOP_RATED.getValue()))
           .execute();
-      return Observable.just(null);
+      return Observable.just(Boolean.TRUE);
     });
   }
 
@@ -75,7 +75,7 @@ public class DatabaseServiceImpl implements DatabaseService {
   }
 
   @Override
-  public Observable<Void> saveMovies(List<? extends MovieModel> movies) {
+  public Observable<Boolean> saveMovies(List<? extends MovieModel> movies) {
     return Observable.create(subscriber -> {
       try {
         List<DatabaseMovieModel> DatabaseMovies;
@@ -98,7 +98,7 @@ public class DatabaseServiceImpl implements DatabaseService {
         for (DatabaseMovieModel DatabaseMovie : DatabaseMovies) {
           mMovieSubject.onNext(DatabaseMovie);
         }
-        subscriber.onNext(null);
+        subscriber.onNext(Boolean.TRUE);
         subscriber.onComplete();
       } catch (Exception e) {
         if (subscriber != null && !subscriber.isDisposed()) {

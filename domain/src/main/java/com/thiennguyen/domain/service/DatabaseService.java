@@ -12,13 +12,13 @@ import io.reactivex.Observable;
 
 public interface DatabaseService {
 
-  Observable<Void> deleteMoviesTrending();
+  Observable<Boolean> deleteMoviesTrending();
 
-  Observable<Void> deleteMoviesTopRated();
+  Observable<Boolean> deleteMoviesTopRated();
 
   Observable<List<? extends MovieModel>> getMoviesTrending();
 
   Observable<List<? extends MovieModel>> getMoviesTopRated();
 
-  Observable<Void> saveMovies(List<? extends MovieModel> movies);
+  Observable<Boolean> saveMovies(List<? extends MovieModel> movies);
 }

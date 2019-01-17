@@ -42,7 +42,7 @@ public class Constant {
 
   public interface Network {
 
-    int TIME_OUT = 50;
+    int TIME_OUT = 30;
   }
 
   public interface Permission {
@@ -51,6 +51,7 @@ public class Constant {
   }
 
   public interface Splash {
+
     int DELAY_TIME = 500;
   }
 

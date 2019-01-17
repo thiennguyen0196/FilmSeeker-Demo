@@ -72,7 +72,7 @@ public class TopRatedFragment extends MvpFragment<TopRatedPresenter> implements 
 
   @Override
   public void onLoadMore() {
-    presenter.loadTopRatedMovies();
+    presenter.loadTopRatedMoviesMore();
   }
 
   @Override

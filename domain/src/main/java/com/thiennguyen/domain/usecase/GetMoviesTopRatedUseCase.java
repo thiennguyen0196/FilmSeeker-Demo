@@ -5,6 +5,7 @@ import com.thiennguyen.domain.model.MovieModel;
 import com.thiennguyen.domain.service.ApiService;
 import com.thiennguyen.domain.service.DatabaseService;
 
+import java.util.Collections;
 import java.util.List;
 
 import io.reactivex.Observable;
@@ -27,9 +28,9 @@ public class GetMoviesTopRatedUseCase {
   public Observable<List<? extends MovieModel>> getMoviesTopRated(String language, int page) {
     if (page == Constant.Movie.PAGE_1) {
       return mApiService.getMoviesTopRated(language, Constant.Movie.PAGE_1)
-          .onErrorReturn(throwable -> null)
-          .flatMap(movies -> mDatabaseService.saveMovies(movies)
-              .flatMap(aVoid -> mDatabaseService.getMoviesTopRated()));
+          .onErrorReturn(throwable -> Collections.emptyList())
+          .flatMap(mDatabaseService::saveMovies)
+          .flatMap(aVoid -> mDatabaseService.getMoviesTopRated());
     } else {
       return mApiService.getMoviesTopRated(language, page);
     }

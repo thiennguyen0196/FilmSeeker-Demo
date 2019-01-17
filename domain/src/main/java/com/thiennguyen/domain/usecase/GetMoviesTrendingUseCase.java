@@ -5,7 +5,7 @@ import com.thiennguyen.domain.model.MovieModel;
 import com.thiennguyen.domain.service.ApiService;
 import com.thiennguyen.domain.service.DatabaseService;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import io.reactivex.Observable;
@@ -28,9 +28,9 @@ public class GetMoviesTrendingUseCase {
   public Observable<List<? extends MovieModel>> getMoviesTrending(String language, int page) {
     if (page == Constant.Movie.PAGE_1) {
       return mApiService.getMoviesTrending(language, Constant.Movie.PAGE_1)
-          .onErrorReturn(throwable -> null)
-          .flatMap(movies -> mDatabaseService.saveMovies(movies)
-              .flatMap(aVoid -> mDatabaseService.getMoviesTrending()));
+          .onErrorReturn(throwable -> Collections.emptyList())
+          .flatMap(mDatabaseService::saveMovies)
+          .flatMap(aBoolean -> mDatabaseService.getMoviesTrending());
     } else {
       return mApiService.getMoviesTrending(language, page);
     }
@@ -38,6 +38,6 @@ public class GetMoviesTrendingUseCase {
 
   public Observable<List<? extends MovieModel>> refreshMoviesTrending(String language) {
     return mDatabaseService.deleteMoviesTrending()
-        .flatMap(aBoolean2 -> getMoviesTrending(language, Constant.Movie.PAGE_1));
+        .flatMap(aBoolean -> getMoviesTrending(language, Constant.Movie.PAGE_1));
   }
 }

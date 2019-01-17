@@ -42,18 +42,18 @@ A few of things Film Seeker - Demo application can do:
 * Find nearby movie theaters
 * View detail information of a particular movie
 
-<img src="https://user-images.githubusercontent.com/25218255/51084454-69256800-175c-11e9-8e5b-8aba4c263ded.png" align="center" />
+<img src="https://user-images.githubusercontent.com/25218255/51339380-e5061400-1abe-11e9-8a93-fe52da196b22.png" align="center" />
 
-<img src="https://user-images.githubusercontent.com/25218255/51084452-688cd180-175c-11e9-93b9-961d7e69d8b3.png" align="center" />
+<img src="https://user-images.githubusercontent.com/25218255/51339385-e6cfd780-1abe-11e9-9d91-b6b7e88eed37.png" align="center" />
 
-<img src="https://user-images.githubusercontent.com/25218255/51084453-69256800-175c-11e9-8b63-6c2eb7caecbf.png" align="center" />
+<img src="https://user-images.githubusercontent.com/25218255/51339391-e9323180-1abe-11e9-8ce8-d94f10445091.png" align="center" />
 
 ## Libraries
 This mobile application uses following open source libraries:
 * [Dagger](https://google.github.io/dagger/) version 2.15
 * [DBFlow](https://guides.codepath.com/android/DBFlow-Guide) version 4.2.4
 * [OkHttp](http://square.github.io/okhttp/) version 3.9.1
-* [Retrofit](https://square.github.io/retrofit/) version 2.3.0
+* [Retrofit](https://square.github.io/retrofit/) version 2.4.0
 * [RxJava](https://github.com/ReactiveX/RxJava) version 2.2.5
 * [RxAndroid](https://github.com/ReactiveX/RxAndroid) version 2.1.0
 
