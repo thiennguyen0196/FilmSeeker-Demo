@@ -1,0 +1,17 @@
+<resources>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme.Light" parent="MdTheme.Light">
+    <item name="mdColor_primaryPalette">@color/colorPrimary</item>
+    <item name="mdColor_primaryPalette_dark">@color/colorPrimaryDark</item>
+    <item name="mdColor_accentPalette">@color/colorAccent</item>
+    <item name="android:textColorPrimary">@color/mdColor_blueGrey_dark</item>
+  </style>
+
+  <!-- Splash screen theme. -->
+  <style name="SplashTheme" parent="AppTheme.Light">
+    <item name="android:windowBackground">@drawable/background_splash</item>
+    <item name="android:windowFullscreen">true</item>
+  </style>
+
+</resources>

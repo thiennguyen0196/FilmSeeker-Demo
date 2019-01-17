@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+  android:opacity="opaque">
+  <item android:drawable="@drawable/background_app_gradient" />
+  <item
+    android:drawable="@drawable/ic_launcher"
+    android:gravity="center"
+    android:height="220dp"
+    android:width="220dp" />
+</layer-list>

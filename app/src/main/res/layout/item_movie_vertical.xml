@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_margin="@dimen/mdLayoutSpacing_xs"
+  app:cardCornerRadius="@dimen/mdLayoutSpacing_xs"
+  app:cardElevation="@dimen/mdLayoutSpacing_xs"
+  xmlns:fresco="http://schemas.android.com/apk/res-auto"
+  style="@style/MdCardView.Card.Small">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+      android:id="@+id/imgPoster"
+      android:layout_width="@dimen/mdFontSize_display4"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/mdLayoutSpacing_sm"
+      android:layout_marginRight="@dimen/mdLayoutSpacing_sm"
+      fresco:actualImageScaleType="centerCrop"
+      fresco:placeholderImage="@drawable/ic_poster_placeholder"
+      fresco:placeholderImageScaleType="centerInside"
+      fresco:viewAspectRatio="@dimen/ratio_2_3" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_margin="@dimen/mdLayoutSpacing_sm"
+      android:layout_toEndOf="@id/imgPoster"
+      android:layout_toRightOf="@id/imgPoster"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/txtTitle"
+        android:textColor="@color/mdColor_blueGrey_dark"
+        tools:text="@string/txt_tools"
+        style="@style/MdText.Title" />
+
+      <TextView
+        android:id="@+id/txtReleaseDate"
+        android:textColor="@color/mdColor_blueGrey_dark"
+        tools:text="@string/txt_tools"
+        style="@style/MdText.Caption" />
+
+      <TextView
+        android:id="@+id/txtVoteAverage"
+        android:layout_marginBottom="@dimen/mdLayoutSpacing_xs"
+        android:layout_marginTop="@dimen/mdLayoutSpacing_xs"
+        android:background="@drawable/background_rounded_corner"
+        android:textColor="@color/mdTextColorPrimary_dark"
+        tools:text="@string/txt_tools_vote"
+        style="@style/MdText.Subhead1" />
+
+      <TextView
+        android:id="@+id/txtOverview"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/mdColor_blueGrey_dark"
+        tools:text="@string/txt_tools"
+        style="@style/MdText.Body1" />
+    </LinearLayout>
+  </RelativeLayout>
+</android.support.v7.widget.CardView>

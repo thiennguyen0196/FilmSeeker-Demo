@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="api_google_map_key">Paste your Google Map API key here</string>
+  <string name="api_movie_key">Paste your The Movie DB API key here</string>
+</resources>

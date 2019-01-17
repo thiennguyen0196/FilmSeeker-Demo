@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".ui.nearby_theaters.NearbyTheatersFragment">
+
+  <com.google.android.gms.maps.MapView
+    android:id="@+id/map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/listTheaters"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="@dimen/mdLayoutSpacing_xs"
+    android:scrollbars="horizontal"
+    style="@style/MdListItem.ThreeLine.AvatarWithTextAndIcon" />
+
+  <android.support.design.widget.FloatingActionButton
+    android:id="@+id/btnReload"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:layout_margin="@dimen/mdLayoutSpacing"
+    android:clickable="true"
+    android:focusable="true"
+    android:tint="@color/mdColor_white"
+    app:backgroundTint="@color/mdColor_black_light"
+    app:fabSize="auto"
+    app:srcCompat="@drawable/ic_gps"
+    style="@style/MdFloatingActionButton" />
+</RelativeLayout>
+
+

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/coordinatorLayout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fitsSystemWindows="true"
+  xmlns:fresco="http://schemas.android.com/apk/res-auto"
+  tools:context=".ui.detail.DetailMovieActivity">
+
+  <android.support.design.widget.AppBarLayout
+    android:id="@+id/appBarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <android.support.design.widget.CollapsingToolbarLayout
+      android:id="@+id/collapsingToolBarLayout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/background_app_gradient"
+      android:fitsSystemWindows="true"
+      app:contentScrim="?attr/colorPrimary"
+      app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+      <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/imgBackdrop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_collapseMode="parallax"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/ic_backdrop_placeholder"
+        fresco:placeholderImageScaleType="centerInside"
+        fresco:viewAspectRatio="@dimen/ratio_16_9" />
+
+      <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/ic_blank_transparent"
+        app:layout_collapseMode="pin"
+        app:navigationIcon="@drawable/ic_arrow_back" />
+    </android.support.design.widget.CollapsingToolbarLayout>
+  </android.support.design.widget.AppBarLayout>
+
+  <android.support.v4.widget.NestedScrollView
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:scrollbars="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/mdLayoutSpacing"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView
+          android:layout_width="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:layout_margin="0dp"
+          app:cardCornerRadius="@dimen/mdLayoutSpacing_xs"
+          app:cardElevation="@dimen/mdLayoutSpacing_xs"
+          style="@style/MdCardView.Card.Small">
+
+          <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imgPoster"
+            android:layout_width="@dimen/mdFontSize_display4"
+            android:layout_height="wrap_content"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/ic_poster_placeholder"
+            fresco:placeholderImageScaleType="centerInside"
+            fresco:viewAspectRatio="@dimen/ratio_2_3" />
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:layout_marginLeft="@dimen/mdLayoutSpacing_sm"
+          android:layout_marginStart="@dimen/mdLayoutSpacing_sm"
+          android:orientation="vertical">
+
+          <TextView
+            android:id="@+id/txtTitle"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/mdColor_blueGrey_dark"
+            tools:text="@string/txt_tools"
+            style="@style/MdText.Title" />
+
+          <TextView
+            android:id="@+id/txtReleaseDate"
+            android:textColor="@color/mdColor_blueGrey_dark"
+            tools:text="@string/txt_tools"
+            style="@style/MdText.Body1" />
+
+          <TextView
+            android:id="@+id/txtVoteAverage"
+            android:layout_marginTop="@dimen/mdLayoutSpacing_sm"
+            android:background="@drawable/background_rounded_corner"
+            android:padding="@dimen/mdLayoutSpacing_sm"
+            android:textColor="@color/mdTextColorPrimary_dark"
+            tools:text="@string/txt_tools_vote"
+            style="@style/MdText.Title" />
+        </LinearLayout>
+      </LinearLayout>
+
+      <TextView
+        android:layout_marginLeft="@dimen/mdLayoutSpacing"
+        android:layout_marginStart="@dimen/mdLayoutSpacing"
+        android:drawablePadding="@dimen/mdLayoutSpacing_sm"
+        android:text="@string/txt_overview"
+        android:textColor="@color/mdColor_blueGrey_dark"
+        app:drawableLeftCompat="@drawable/ic_bookmark"
+        style="@style/MdText.Title" />
+
+      <TextView
+        android:id="@+id/txtOverview"
+        android:layout_marginBottom="@dimen/mdLayoutSpacing_sm"
+        android:layout_marginEnd="@dimen/mdLayoutSpacing"
+        android:layout_marginLeft="@dimen/mdLayoutSpacing"
+        android:layout_marginRight="@dimen/mdLayoutSpacing"
+        android:layout_marginStart="@dimen/mdLayoutSpacing"
+        android:layout_marginTop="@dimen/mdLayoutSpacing_xs"
+        android:paddingEnd="@dimen/mdLayoutSpacing_xs"
+        android:paddingLeft="@dimen/mdLayoutSpacing_xs"
+        android:paddingStart="@dimen/mdLayoutSpacing_xs"
+        android:textColor="@color/mdColor_blueGrey_dark"
+        tools:text="@string/txt_tools"
+        style="@style/MdText.Body1" />
+
+      <TextView
+        android:layout_marginLeft="@dimen/mdLayoutSpacing"
+        android:layout_marginStart="@dimen/mdLayoutSpacing"
+        android:layout_marginTop="@dimen/mdLayoutSpacing"
+        android:drawablePadding="@dimen/mdLayoutSpacing_sm"
+        android:text="@string/txt_similar_movies"
+        android:textColor="@color/mdColor_blueGrey_dark"
+        app:drawableLeftCompat="@drawable/ic_bookmark"
+        style="@style/MdText.Title" />
+
+      <android.support.v7.widget.RecyclerView
+        android:id="@+id/listSimilarMovies"
+        android:layout_marginLeft="@dimen/mdLayoutSpacing_xs"
+        android:layout_marginStart="@dimen/mdLayoutSpacing_xs"
+        android:scrollbars="horizontal"
+        style="@style/MdListItem.SingleLine.AvatarWithText" />
+    </LinearLayout>
+  </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

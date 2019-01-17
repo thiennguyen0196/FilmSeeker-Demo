@@ -1,0 +1,36 @@
+<resources>
+  <string name="app_name">Film Seeker</string>
+
+  <string name="dialog_btn_allow">ALLOW</string>
+  <string name="dialog_btn_app_setting">APP SETTINGS</string>
+  <string name="dialog_btn_deny">DENY</string>
+  <string name="dialog_btn_not_now">NOT NOW</string>
+  <string name="dialog_msg_loading">Please wait while loading…</string>
+  <string name="dialog_permission_denied_location_title">Allow Film Seeker to use location of your phone?</string>
+  <string
+    name="dialog_permission_denied_location_msg">This lets Film Seeker use your location to find nearby theaters which are around you.</string>
+  <string name="dialog_permission_denied_permanently_location_title">Allow Film Seeker to use location of your phone?</string>
+  <string name="dialog_permission_denied_permanently_location_msg">This lets Film Seeker use your location to find nearby theaters which are around you.\n\nTo enable this, click App Setting below and activate Location under the Permissions menu</string>
+
+  <string name="menu_nearby_theaters">Theaters</string>
+  <string name="menu_top_rated">Top Rated</string>
+  <string name="menu_trending">Trending</string>
+
+  <string name="title_nearby_theaters">Nearby Theaters</string>
+  <string name="title_search_movies">Search Movies</string>
+  <string name="title_slide_1">Trending Movies</string>
+  <string name="title_slide_2">Top Rated Movies</string>
+  <string name="title_slide_3">Nearby Theaters</string>
+  <string name="title_top_rated">Top Rated Movies</string>
+  <string name="title_trending_movies">Trending Movies</string>
+
+  <string name="txt_error">Something went wrong\nPlease check your internet connection</string>
+  <string name="txt_location_permission_denied_msg">Location permission denied</string>
+  <string name="txt_overview">Overview</string>
+  <string name="txt_released_date">Released: %s</string>
+  <string name="txt_similar_movies">Similar Movies</string>
+  <string name="txt_tap_retry">"Tap to retry</string>
+  <string name="txt_tools">Film Seeker</string>
+  <string name="txt_tools_vote">8.3</string>
+  <string name="txt_your_position">Your Position</string>
+</resources>
